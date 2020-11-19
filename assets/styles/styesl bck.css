@@ -1,0 +1,279 @@
+* {
+	padding:0;
+	margin:0;
+	font-family: 'Quicksand', sans-serif;
+	color: #333;
+}
+header {
+	/*box-shadow: 0 0 20px rgba(0, 0, 0, 15);*/
+	height:55px;
+}
+header h1 {
+	display: inline-block;
+	padding:15px 2px;
+	text-transform: uppercase;
+}
+header h1 a {
+	transition: .3s;
+}
+header h1 a:hover {
+	color: #F84744;
+}
+header ul {
+	float: right;
+}
+header ul li {
+	font-weight: bold;
+	font-size: 20px;
+	padding:13px;
+	display: inline-block;
+}
+header ul li a {
+	transition: .3s;
+}
+header ul li a:hover {
+	text-decoration: underline;
+	color: rgb(228, 40, 40);
+}
+
+.active-nav {
+	/* font-size: 25px; */
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+.container {
+	width:90%;
+	margin:0 auto;
+}
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.mobile-menu {
+	float: right;
+	display: none;
+	padding:18px;
+}
+.mobile-menu:hover {
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width:300px;
+	background-color: rgba(16, 47, 80, .9);
+	transition: .3s;
+	z-index: 9999;
+}
+.sidebar ul li a {
+	color: #fff;
+}
+.sidebar ul li {
+	padding:24px;
+	transition: .3s;
+	transition-property: background-color;
+}
+.sidebar ul li:hover {
+	background-color: #F84744;
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+.banner {
+	/* background-color: rgb(218, 70, 70); */
+	justify-content: center;
+	text-align: center;
+	background-color: rgb(25, 27, 27);
+	padding:50px 0;
+	box-sizing: border-box;
+}
+section {
+	padding:50px 0;
+}
+.banner img {
+	width: 210px;
+	height: 200px;
+	border-radius: 50%;
+}
+.banner h2{
+	font-size: 26px;
+	color: #fff;
+} 
+.banner p{
+	font-size: 20px;
+	color: #fff;
+}
+.banner h2 {
+	margin-bottom: 10px;
+}
+.banner p {
+	font-size: 18px;
+}
+.banner-left {
+	padding-left:240px;
+} 
+.banner div{
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+section h3 {
+	font-size: 25px;
+	padding-bottom: 20px;
+	text-align: center;
+	margin:20px;
+	position: relative;
+}
+
+#about p {
+	/* font-smily: Arial, Helvetica, sans-serif; */
+	font-weight: bold;
+	text-align: center;
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+#skills,
+#contact {
+	background-color: #f9f9f9;
+}
+.contact-link {
+	text-decoration: none;
+}
+.contact-link:hover{
+	text-decoration: underline;
+	color: rgb(255, 0, 0);
+}
+#skills .bar {
+	height: 30px;
+	background-color: #fff;
+	border:2px solid #ddd;
+	margin: 5px 0 20px 0;
+}
+.bar .nilai {
+	height:30px;
+	background-color:rgb(43, 139, 241);
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+}
+.bar .nilai:hover{
+	background-color:rgb(24, 89, 154);
+}
+.java {
+	width:99%;
+}
+.python {
+	width:90%;
+}
+.cpp {
+	width:80%;
+}
+.robotic {
+	width:95%;
+}
+.android {
+	width:85%;
+}
+.web {
+	width:70%;
+}
+
+.skill-name{
+	font-size: 19px;
+}
+
+.col-4 {
+	width:30%;
+	box-sizing: border-box;
+	padding:51px;
+	float: left;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.col-4 img {
+	width:100%;
+	/* object-fit: cover; */
+}
+.col-4 a:hover img {
+	transform: scale(1.2);
+}
+.col-3 {
+	width:33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	padding:50px 10px;
+}
+.col-3 h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+footer {
+	font-family: cursive;
+	font-size: 16px;
+	background-color: rgb(21, 22, 23);
+	padding:15px;
+	text-align: center;
+}
+footer small {
+	color: #fff;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 768px){
+	.mobile-menu {
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+	.col-4 {
+		width:50%;
+	}
+	.col-3 {
+		width:100%;
+	}
+}
+
+
+
+/*.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills div {
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.skill-card {
+    width: 400px;
+    height: 250px;
+    margin: 50px 0;
+}
+
+.skill-card h3 {
+	font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.skill-card img {
+    width: 90%;
+    height: 110%;
+    object-fit: cover;
+}*/
